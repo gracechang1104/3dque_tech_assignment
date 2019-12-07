@@ -13,3 +13,11 @@ Though the unit test tests for this and passes, note that special characters for
 ie. /reverse/hello?this, returns only olleh
 
 Strings containing unsafe characters such as "^", "%", "]" and "[" will return a 400 Bad Request.
+
+To run the project, first make sure you have Maven installed locally. Maven installation instructions can be found: https://maven.apache.org/install.html. If on Mac and homebrew is installed, Maven can be installed by running "brew install maven".
+
+Go to terminal and ensure you are in this project file directory: */3dque
+
+Run the following command: mvn spring-boot:run
+
+Open a browser of your choice and go to localhost:8080/reverse/{string}, where {string} is a word or string of characters of your choice.
