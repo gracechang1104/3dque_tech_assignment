@@ -1,6 +1,6 @@
 # 3dque_tech_assignment
 
-This implementation takes in GET /reverse/<string> and reverses <string>.
+This implementation takes in GET /reverse/< string > and reverses < string >.
 
 ie. /reverse/hello, returns olleh
 
