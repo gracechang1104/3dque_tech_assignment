@@ -16,8 +16,12 @@ Strings containing unsafe characters such as "^", "%", "]" and "[" will return a
 
 To run the project, first make sure you have Maven installed locally. Maven installation instructions can be found: https://maven.apache.org/install.html. If on Mac and homebrew is installed, Maven can be installed by running "brew install maven".
 
-Go to terminal and ensure you are in this project file directory: */3dque
+Go to terminal and ensure you are in the project file directory: */3dque
 
 Run the following command: mvn spring-boot:run
 
 Open a browser of your choice and go to localhost:8080/reverse/{string}, where {string} is a word or string of characters of your choice.
+
+To run the project as a JAR, ensure you are in the project file directory: */3dque
+
+Then, run java -jar target/3dque_technical_assignment-1.0-SNAPSHOT.jar
