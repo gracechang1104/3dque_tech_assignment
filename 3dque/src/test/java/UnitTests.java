@@ -68,5 +68,12 @@ public class UnitTests {
 
     }
 
+    @Test
+    public void testSemicolon()
+    {
+        String returnString = newStringManager.reverseString("hello;world");
+        Assert.assertEquals("dlrow;olleh", returnString);
+    }
+
 
 }
