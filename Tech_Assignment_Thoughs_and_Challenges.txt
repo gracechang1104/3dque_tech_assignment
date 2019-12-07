@@ -1,0 +1,27 @@
+Thought Process
+
+To build this as a Maven project, I made a new project and specified it as a Maven build in my IDE.
+
+When I saw to reverse a string, my thought was to change the string to a character array, then switching the index of a character. The first character would become the last, second character would become second to last, etc. This can be achieved through using a for loop, storing the characters as temporary values, and switching the indexes. 
+
+example:
+“Hello”
+
+h will become last character, where o is. O will become first character, where h is.
+So, charArr[0] = o, and charArr[charArr.length] = h.
+
+With this method, you only need to sort half the array - which actually gives you O(n/2) run time, where n is the length of the array.
+
+I then thought about edge cases. There were two I thought of that would really matter: if the string only has one character, or if the string only has the same repeating character (ie. “rrr”).
+If the string only has one character, nothing needs to be done, so it would just return the string itself.
+If the string has only the same repeating character, I would need to check the entire character array first. This would result in an O(n) run time, which is slower than just reversing the character array. As such, I did not implement a check for this.
+
+While building out this project, I wanted to make sure it could be scalable. As such, there is a StringManager class rather than a ReverseString class. Perhaps in the future, other functionalities will be done to strings.
+
+Challenges
+
+One of the biggest challenge I had for this assignment was that I’d never built a REST API using Spring before. Luckily, Spring has great documentation and walks you through how to build a simple RESTful Web Service. I mainly referenced this documentation for building Spring with Maven (particularly the pom.xml was super helpful getting the correct dependencies) as well as building and running the web service.
+
+Another challenge was running the project so that the service goes up. I did not have Maven installed on my local machine. After trying to install Maven and getting it into the correct path (and failing), I was successful but just running ‘brew install maven’ in my command line.
+
+As well, I am not too familiar with URL syntax. I did some research and landed upon this: https://www.ietf.org/rfc/rfc3986.txt. I tested the service with some special characters/unsafe characters to see what would happen, and noted them accordingly in my documentation.
